@@ -1,5 +1,7 @@
 import numpy as np
 
+from questions_answers import question_dict_tech, answer_dict_tech
+
 def pick_nontech(num_questions=1):
   question_dict = {
     0: ["Tell me about yourself. How did you get here?"],
@@ -31,33 +33,6 @@ def pick_nontech(num_questions=1):
           input('')
 
 def pick_tech(num_questions=1):
-    question_dict = {
-    0: ["How would you rate you skill with Python on a scale from 1-10?", "How would you rate you skill with Python on a scale from 1-5?"],
-    1: ["Whats your experience with PySpark?", 'How would you rate yourself with Spark on a scale from 1-10?', 'How would you rate yourself with Spark on a scale from 1-5?'],
-    2: ["What's your experience with SQL?", 'How would you rate yourself with SQL on a scale from 1-10?', 'How would you rate yourself with SQL on a scale from 1-5?'],
-    3: ["What is R2? What are other metrics that could be better than R2?"],
-    4: ["What is the curse of dimensionality?"],
-    5: ["Is more data always better?"],
-    6: ["How can you determine which features are the most im- portant in your model?"],
-    7: ["What are the advantages/disadvantages of GBM vs SVM?", "What are the advantages/disadvantages of GBM vs random forest?", "What are the advantages/disadvantages of logistic regression vs GBM?"],
-    8: ["What is Spark/PySpark?", "What is distributed computing? When would you use it?"],
-    9: ["Now you have a feasible amount of predictors, but you’re fairly sure that you don’t need all of them. How would you perform feature selection on the dataset?"],
-    10: ["What is the main idea behind ensemble learning? If I had many different models that predicted the same response variable, what might I want to do to incorporate all of the models? Would you expect this to perform better than an individual model or worse?"],
-    11: ["In an A/B test, how can you check if assignment to the various buckets was truly random?"],
-    12: ["What might be the benefits of running an A/A test, where you have two buckets who are exposed to the exact same product?"],
-    13: ["What would be the hazards of letting users sneak a peek at the other bucket in an A/B test?"],
-    14: ["What would be some issues if blogs decide to cover one of your experimental groups?"],
-    15: ["How would you run an A/B test for many variants, say 20 or more?"],
-    16: ["How would you run an A/B test if the observations are extremely right-skewed?"],
-    17: ["What is a p-value? What is the di erence between type-1 and type-2 error?"],
-    18: ["What is maximum likelihood estimation? Could there be any case where it doesn’t exist?"],
-    19: ["What is a confidence interval and how do you interpret it?"],
-    21: ["What is unbiasedness as a property of an estimator? Is this always a desirable property when performing inference? What about in data analysis or predictive modeling?"],
-    22: ["When can parallelism make your algorithms run faster? Slower?"],
-    23: ["What are the different types of joins? What are the differences between them?"],
-    24: ["Why might a join on a subquery be slow? How might you speed it up?"],
-    25: ["Describe the difference between primary keys and foreign keys in a SQL database."]
-    }
 
     used = []
     i = 1
