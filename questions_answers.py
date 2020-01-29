@@ -38,12 +38,15 @@ question_dict_tech = {
 37: ["Why is Naive Bayes so naive?", "Explain prior probability, likelihood and marginal likelihood in context of naiveBayes algorithm?"],
 38: ["What is multicollinearity?", "After analyzing the model, your manager has informed that your regression model is suffering from multicollinearity. How would you check if he’s true? Without losing any information, can you still build a better model?"],
 39: ["While working on a data set, how do you select important variables? Explain your methods."],
-40: ["Both being tree based algorithm, how is random forest different from Gradient boosting algorithm (GBM)?"],
+40: ["Both being tree based algorithm, how is random forest different from Gradient boosting algorithm (GBM)?", "Describe random forest algorithm. What are its strengths and limitations?"],
 41: ['What is Bayes Theorem?', 'Explain Bayes theorem.'],
 42: ['What is the difference between a permutation and a combination?'],
 43: ['What is variance?', 'What is covariance?', 'What is a correlation?'],
 44: ['Describe the Central Limit Theorem.']
-45: ['Describe the following statistical distributions and an example of when you would use it: Bernoulli, Binomial, Geometrics, Poisson, Exponential, Uniform, Gaussian.']
+45: ['Describe the following statistical distributions and an example of when you would use it: Bernoulli, Binomial, Geometrics, Poisson, Exponential, Uniform, Gaussian.'],
+46: ['Calculate the variance of the following population: 10, 12, 34, 24'],
+47: ['How would you prove that a coin is unfair'],
+
 }
 
 answer_dict_tech = {
@@ -72,6 +75,15 @@ Precision-Recall curves summarize the trade-off between the true positive rate a
         Set hyperparameters: You can use hyperparamters to set the weights. This will give more weight to the underrepresented class. For example in XGBoost you can set the scale_pos_weight to be 10 if you have a 10:1 imbalance in the dataset. For Random Forest you can set the class_weight formula.
 
 
+        ''',
+    35: '''
+        The bias-variance tradeoff states that the high generalizability (bias) of a model's predition is at the cost of it's variance. The more flexible the model, the greater the variance.
+        High bias (underfitting) models can miss relevant relationships between features and target outputs. High variance (overfitting) models can be sensitive to noise in the training data, rather than the intended target.
+        Some strategies for dealing with reducing variance for linear regression are to subset the selection of predictors stepwise, use regularization, project the predictors into a lower dimensional space.
+        ''',
+    40: '''Decision trees can be grown as a forest by bootstrapping our dataset (pick with replacement). While growing each of our trees we can randomly select only an m subset of the variables features at each split. This creates variability in the trees and decorrelates them.
+        With bootstrapping ~1/3 of the data is left out of every tree. This out of bag data can be used to estimate the out of bag error.
+        Boosting: Combine weak learners to create strong learners. Sequentially apply weak classification algorithms to modified versions of the data
         ''',
     41: '''Baye's Rule describes the probability of an event occuring based on
         prior known knowledge that is related to the event. For example, if the probability that someone has cancer
