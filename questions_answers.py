@@ -73,13 +73,12 @@ Precision-Recall curves summarize the trade-off between the true positive rate a
         Oversampling: Add more positive data points by picking existing samples with replacement via  1) SMOTE (synthetic minority oversampling technique): generate similar points around the original data 2) ADASYN (adaptive synthetic sampling approach for imbalanced learning). You can also create a generative model to create new samples. Oversampling can be computationally expensive and algorithmically more involved.
         Combined: keep 1/3 of the of negative-labeled data, use SMOTE to increase positive-labeled data
         Set hyperparameters: You can use hyperparamters to set the weights. This will give more weight to the underrepresented class. For example in XGBoost you can set the scale_pos_weight to be 10 if you have a 10:1 imbalance in the dataset. For Random Forest you can set the class_weight formula.
-
-
         ''',
     35: '''
-        The bias-variance tradeoff states that the high generalizability (bias) of a model's predition is at the cost of it's variance. The more flexible the model, the greater the variance.
+        A model's prediction error is composed of bias + variance + irreducible error. The bias-variance tradeoff states that a simple model will have high bias and low variance, and as it becomes more complex will have high variance and low bias. High bias models tend to be more generalizable (bias) and underfit because they are unable to capture the underlying pattern in the data. A high variance model may overfit because it captures the noise in the data as a pattern. The more flexible the model, the greater the variance.
         High bias (underfitting) models can miss relevant relationships between features and target outputs. High variance (overfitting) models can be sensitive to noise in the training data, rather than the intended target.
         Some strategies for dealing with reducing variance for linear regression are to subset the selection of predictors stepwise, use regularization, project the predictors into a lower dimensional space.
+        Simpler models tend to underfit (logistic and linear regression), while more complex models tend to overfit (GBM, decision trees, RF).
         ''',
     40: '''Decision trees can be grown as a forest by bootstrapping our dataset (pick with replacement). While growing each of our trees we can randomly select only an m subset of the variables features at each split. This creates variability in the trees and decorrelates them.
         With bootstrapping ~1/3 of the data is left out of every tree. This out of bag data can be used to estimate the out of bag error.
