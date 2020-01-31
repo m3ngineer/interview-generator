@@ -53,6 +53,7 @@ answer_dict_tech = {
     3: '''R^2 quantifies the difference that a linear function fits data better or worse than a line of the mean. It is equal to the var(mean) - var(line) / var(mean) or 1 - RSS/TSS, where RSS=sum(yi-yhat)^2 and TSS=sum(yi-ybar)^2. An R2 value of 0.9 means that 90% of the variation in the data is explained by the line.
     Adjusted R^2 takes into account the number of predictors in the model, since R2 will always increase when more predictors are added. adjusted R-squared increases only if the new term improves the model more than would be expected by chance.
     ''',
+    19: '''A confidence interval is the interval around the mean where you are x % certain that the true mean lies within the interval. It is calculated by mean +/- Z(std/sqrt(n)).''',
     26: '''Precision = TP/(TP + FP) - Out of everything that called positive, how many are actually positive?
     Recall = TP/(TP + FN) - Out of everything that is actually positive, how many did you catch?;
     F1 = 2TP/(2TP + FP + FN) - harmonic mean of recall and precision. Combination of everything that is actually positive, how many did you catch and how many are actually positive?
@@ -74,6 +75,7 @@ Precision-Recall curves summarize the trade-off between the true positive rate a
         Combined: keep 1/3 of the of negative-labeled data, use SMOTE to increase positive-labeled data
         Set hyperparameters: You can use hyperparamters to set the weights. This will give more weight to the underrepresented class. For example in XGBoost you can set the scale_pos_weight to be 10 if you have a 10:1 imbalance in the dataset. For Random Forest you can set the class_weight formula.
         ''',
+    30: '''You would use classification over regression for non-continuous measures.''',
     35: '''
         A model's prediction error is composed of bias + variance + irreducible error. The bias-variance tradeoff states that a simple model will have high bias and low variance, and as it becomes more complex will have high variance and low bias. High bias models tend to be more generalizable (bias) and underfit because they are unable to capture the underlying pattern in the data. A high variance model may overfit because it captures the noise in the data as a pattern. The more flexible the model, the greater the variance.
         High bias (underfitting) models can miss relevant relationships between features and target outputs. High variance (overfitting) models can be sensitive to noise in the training data, rather than the intended target.
