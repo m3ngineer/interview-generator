@@ -46,6 +46,8 @@ question_dict_tech = {
 45: ['Describe the following statistical distributions and an example of when you would use it: Bernoulli, Binomial, Geometrics, Poisson, Exponential, Uniform, Gaussian.'],
 46: ['Calculate the variance of the following population: 10, 12, 34, 24'],
 47: ['How would you prove that a coin is unfair'],
+48: ['You are trying to predict who likes what ice cream. The only options are vanilla and chocolate. You quickly build a model without looking at the dataset because you are in a rush and find that the accuracy is very high right off the bat. What do you do next?']
+49: ['You are trying to work with a dataset that is 763 features and 1.5 million rows. You are in a rush and want to model the data as quickly as possible. What do you do?']
 
 }
 
